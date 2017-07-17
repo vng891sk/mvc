@@ -20,7 +20,6 @@ class Mysql
 	{
 		$res = mysqli_query($this->link,$query);
 
-		
 		$post = [];
 		while($row = mysqli_fetch_assoc($res)){
 			$post[] = $row;
