@@ -8,7 +8,11 @@ class PostController extends BaseController
 {
 	public function request()
 	{
-		$data = $this->mysql->select("SELECT * FROM posts");
-		print_r($data);
+		$data = $this->mysql->select("SELECT * FROM news");
+		echo $this->render('index',[
+			'data'=>$data
+		]);
+
+	
 	}
 }

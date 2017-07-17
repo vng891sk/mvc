@@ -13,4 +13,13 @@ class BaseController{
 				$config['password'],
 				$config['database']);
 	}
+
+	public function render($viewFile, $params)
+	{
+		$viewFile = $_SERVER['DOCUMENT_ROOT'].'/views/'.$viewFile.'.php';
+		ob_start();
+		extract($params, EXTR_OVERWRITE);
+		require($viewFile);
+		return ob_get_clean();
+	}
 }
