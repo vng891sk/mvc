@@ -1,5 +1,5 @@
 <?php
-
+namespace models;
 class Mysql
 {
 	public $link;

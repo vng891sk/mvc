@@ -1,7 +1,7 @@
 <?php
-include $_SERVER['DOCUMENT_ROOT'].'/models/Mysql.php';
+include $_SERVER['DOCUMENT_ROOT'].'/Autoload.php';
 $config = require($_SERVER['DOCUMENT_ROOT'].'/config.php');
-
+use models\Mysql;
 $mysql = new Mysql($config['host'],
 				$config['login'],
 				$config['password'],
